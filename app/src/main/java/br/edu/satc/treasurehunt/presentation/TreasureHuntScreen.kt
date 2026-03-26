@@ -2,6 +2,7 @@ package br.edu.satc.treasurehunt.presentation
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -33,11 +34,7 @@ fun TreasureHuntScreen(viewModel: TreasureHuntViewModel) {
     MainBackground {
         NavHost(
             navController = navController,
-            startDestination = "home",
-            enterTransition = { slideInHorizontally { it } + fadeIn() },
-            exitTransition = { slideOutHorizontally { -it } + fadeOut() },
-            popEnterTransition = { slideInHorizontally { -it } + fadeIn() },
-            popExitTransition = { slideOutHorizontally { it } + fadeOut() }
+            startDestination = "home"
         ) {
             composable("home") {
                 HomeScreen(onStart = {

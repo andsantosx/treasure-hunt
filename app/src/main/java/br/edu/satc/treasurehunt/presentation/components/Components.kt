@@ -48,7 +48,7 @@ fun PremiumButton(
             .fillMaxWidth(0.8f),
         shape = RoundedCornerShape(16.dp),
         colors = ButtonDefaults.buttonColors(containerColor = containerColor),
-        elevation = ButtonDefaults.buttonRoundedCornersElevation(defaultElevation = 8.dp)
+        elevation = ButtonDefaults.buttonElevation(defaultElevation = 8.dp)
     ) {
         Text(text, fontSize = 18.sp, fontWeight = FontWeight.Bold)
     }
